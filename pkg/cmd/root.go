@@ -22,6 +22,8 @@ $ %[1]s init
 As an example let's run in the current namespace an old version of nginx that
 we know has vulnerabilities:
 $ kubectl create deployment nginx --image nginx:1.16
+Run the vulnerability scanner to generate policy reports:
+$ %[1]s scan policyreports deployment/nginx
 Run the vulnerability scanner to generate vulnerability reports:
 $ %[1]s scan vulnerabilityreports deployment/nginx
 Once this has been done, you can retrieve the vulnerability report:
